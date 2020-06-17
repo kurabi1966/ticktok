@@ -6,7 +6,7 @@ it('return a 201 on successful signup', async () => {
   return request(app)
     .post('/api/users/signup')
     .send({ email: 'test@test.com', password: 'password' })
-    .expect(400);
+    .expect(201);
 });
 
 it('return a 400 when passing an invalied email while signup', async () => {
