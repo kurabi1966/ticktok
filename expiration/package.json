@@ -1,0 +1,37 @@
+{
+  "name": "expiration",
+  "version": "1.0.0",
+  "description": "Expiration Micro Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-dev src/index.ts --poll",
+    "test": "jest --watchAll --no-cache --coverage --verbose",
+    "test:ci": "jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./src/test/setup.ts"
+    ]
+  },
+  "keywords": [
+    "Tickets",
+    "Microservice"
+  ],
+  "author": "Mohammed Ammar Kurabi",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bull": "^3.14.0",
+    "@zidny.net/common": "^1.0.11",
+    "bull": "^3.14.0",
+    "node-nats-streaming": "^0.3.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.9.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0"
+  }
+}
