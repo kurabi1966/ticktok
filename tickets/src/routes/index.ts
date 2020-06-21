@@ -5,6 +5,7 @@ import { Ticket } from '../models/ticket';
 const router = express.Router();
 
 router.get('/api/tickets', async (req: Request, res: Response) => {
+  // get all tickets from the database.
   const tickets = await Ticket.find({ orderId: undefined });
   res.send(tickets);
 });
